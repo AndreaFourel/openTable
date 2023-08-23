@@ -7,7 +7,7 @@ import { calculateReviewRatingAverage } from "../../utils/calculateReviewRatingA
 
 export default function Stars({reviews, rating}: {reviews: Review[], rating?: number}) {
 
-  const reviewsRating = rating || calculateReviewRatingAverage(reviews);
+  const reviewRating = rating || calculateReviewRatingAverage(reviews);
 
   const renderStars = () => {
 
@@ -15,7 +15,7 @@ export default function Stars({reviews, rating}: {reviews: Review[], rating?: nu
 
     for(let i = 0; i < 5; i++){
 
-      const difference = parseFloat((reviewsRating - i).toFixed(1))
+      const difference = parseFloat((reviewRating - i).toFixed(1))
 
       if (difference >= 1) stars.push(fullStar)
       else if (difference < 1 && difference > 0) {
