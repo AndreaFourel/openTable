@@ -27,28 +27,28 @@ export default function SearchSideBar(
       <div className="border-b pb-4 flex flex-col">
         <h1 className='mb-2'>Region</h1>
         {locations.map(location => 
-        <Link 
-          href={{
-            pathname:'/search',
-            query: {...searchParams,city:location.name}
-          }} 
-          key={location.id} 
-          className='font-light text-reg capitalize'>
-            {location.name}
-        </Link>)}
+          <Link 
+            href={{
+              pathname:'/search',
+              query: {...searchParams,city:location.name}
+            }} 
+            key={location.id} 
+            className='font-light text-reg capitalize'>
+              {location.name}
+          </Link>)}
       </div>
       <div className="border-b pb-4 mt-3 flex flex-col">
         <h1 className='mb-2'>Cuisine</h1>
         {cuisines.map(cuisine=>
-        <Link 
-          href={{
-            pathname: '/search',
-            query: {...searchParams, cuisine:cuisine.name}
-          }}
-          key={cuisine.id} 
-          className='font-light text-reg capitalize'>
-            {cuisine.name}
-        </Link>)}
+          <Link 
+            href={{
+              pathname: '/search',
+              query: {...searchParams, cuisine:cuisine.name}
+            }}
+            key={cuisine.id} 
+            className='font-light text-reg capitalize'>
+              {cuisine.name}
+          </Link>)}
       </div>
       <div className="mt-3 pb-4">
         <h1 className="mb-2">Price</h1>
